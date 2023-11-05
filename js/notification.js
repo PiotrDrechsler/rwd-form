@@ -1,6 +1,9 @@
-const sendBtn = document.getElementById("sendBtn");
-
-sendBtn.addEventListener("click", (e) => {
+document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("Information has been sent!");
+  const success = document.getElementById("success");
+  success.style.display = "block";
+
+  setTimeout(() => {
+    success.style.display = "none";
+  }, 4000);
 });

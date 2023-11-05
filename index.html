@@ -8,6 +8,7 @@
     <meta name="desctription" content="RWD Form" />
     <link rel="stylesheet" href="css/mordern-normalize.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,7 +42,7 @@
           </svg>
         </button>
         <h3 class="modal__head">Leave your information in the form below</h3>
-        <form class="form" name="singup-form">
+        <form class="form" name="singup-form" id="form" onsubmit="message()">
           <label class="form__label" for="username"
             >Name
             <svg class="form__icon" width="18" height="18" style="top: 30px">
@@ -51,6 +52,7 @@
               class="form__input"
               name="username"
               type="text"
+              pattern="^[a-zA-Z]+$"
               id="username"
               required
             />
@@ -64,6 +66,7 @@
               class="form__input"
               name="last name"
               type="text"
+              pattern="^[a-zA-Z]+$"
               id="last name"
               required
             />
@@ -84,7 +87,6 @@
               autocorrect="off"
               autocomplete="on"
               inputmode="email"
-              pattern="(?![_.-])((?![_.-][_.-])[a-zA-Z\d_.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
               required
             />
           </label>
@@ -128,10 +130,13 @@
             Send
           </button>
         </form>
+        <div class="message">
+          <div class="success" id="success">Your message has been sent.</div>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/count.js"></script>
-    <script src="./js/notification.js" defer></script>
+    <script src="./js/notification.js"></script>
   </body>
 </html>
