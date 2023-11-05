@@ -1,9 +1,13 @@
-document.getElementById("form").addEventListener("submit", function (e) {
+const form = document.getElementById("form");
+const success = document.getElementById("success");
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const success = document.getElementById("success");
   success.style.display = "block";
 
   setTimeout(() => {
     success.style.display = "none";
   }, 4000);
+
+  form.reset();
 });
