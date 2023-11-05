@@ -1,0 +1,36 @@
+.button {
+  background-color: var(--brand-main-color);
+  color: var(--text-second-color);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  line-height: 1.875em;
+  letter-spacing: 0.06em;
+  transition: var(--transition);
+  transition-property: background-color, transform;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: var(--brand-main-color-hover);
+    transform: scale(1.05);
+  }
+
+  &--margin-top {
+    margin-top: 31px;
+  }
+
+  &__banner {
+    width: 200px;
+    height: 50px;
+    justify-content: space-evenly;
+    letter-spacing: 0.06em;
+  }
+
+  &__form {
+    width: 100px;
+  }
+}

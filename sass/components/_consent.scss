@@ -1,0 +1,47 @@
+.consent {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.171em;
+  letter-spacing: 0.03em;
+  color: var(--text-third-color);
+  margin-top: 20px;
+
+  &__label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-third-color);
+  }
+
+  &__input {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    padding-left: 3px;
+  }
+}
+
+.input-button {
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: var(--transition);
+  transition-property: background-color, transform;
+
+  &:checked {
+    background-image: url(../images/icon-checked.svg);
+    background-color: var(--brand-main-color);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .consent {
+    font-size: 12px;
+  }
+}

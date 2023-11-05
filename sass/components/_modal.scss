@@ -1,0 +1,71 @@
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  min-height: 680px;
+  background-color: var(--brand-second-color);
+  transition: var(--transition);
+  transition-property: transform;
+
+  &__close-btn {
+    position: absolute;
+    top: -14px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--brand-main-color);
+    transition: var(--transition);
+    transition-property: transform;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: var(--brand-main-color-hover);
+      transform: scale(1.05);
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      fill: white;
+      transform: translate(-50%, -50%);
+      transition: var(--transition);
+      transition-property: transform;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: var(--brand-main-color-hover);
+      transform: scale(1.05);
+    }
+  }
+
+  &__head {
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    max-width: 370px;
+    text-align: center;
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    min-height: 650px;
+
+    &__head {
+      max-width: 448px;
+    }
+  }
+}

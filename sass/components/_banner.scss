@@ -1,0 +1,118 @@
+.banner {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background/banner-mobile.jpg");
+  background-size: cover;
+  min-height: 400px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+  }
+
+  &__tittle {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.615em;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--text-second-color);
+    width: 365px;
+
+    &--bottom {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .banner {
+    &__tittle {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .banner {
+    min-height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background/banner-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    min-height: 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background/banner-desktop.png");
+
+    &__tittle {
+      font-size: 44px;
+      line-height: 1.363em;
+      width: 696px;
+    }
+  }
+}
+// .banner {
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url('../images/background/backgroundteam.png');
+//   min-height: 600px;
+//   background-size: 1600px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   &__container {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   &__tittle {
+//     font-size: 44px;
+//     font-weight: 900;
+//     font-style: normal;
+//     line-height: 1.36em;
+//     letter-spacing: 0.06em;
+//     text-align: center;
+//     color: var(--text-second-color);
+//     width: 696px;
+
+//     &--bottom {
+//       margin-bottom: 30px;
+//     }
+//   }
+
+//   &__button {
+//     width: 200px;
+//     height: 50px;
+//     justify-content: space-evenly;
+//     letter-spacing: 0.06em;
+//   }
+// }
