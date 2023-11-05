@@ -8,7 +8,6 @@
     <meta name="desctription" content="RWD Form" />
     <link rel="stylesheet" href="css/mordern-normalize.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +25,7 @@
         <div class="banner__container container">
           <h1 class="banner__tittle banner__tittle--bottom">RWD Form</h1>
           <button class="button button__banner" type="button" data-modal-open>
-            Open form
+            Open your form
           </button>
         </div>
       </section>
@@ -42,7 +41,7 @@
           </svg>
         </button>
         <h3 class="modal__head">Leave your information in the form below</h3>
-        <form class="form" name="singup-form" id="form" onsubmit="message()">
+        <form class="form" name="singup-form" id="form">
           <label class="form__label" for="username"
             >Name
             <svg class="form__icon" width="18" height="18" style="top: 30px">
@@ -54,6 +53,7 @@
               type="text"
               pattern="^[a-zA-Z]+$"
               id="username"
+              placeholder="ex. John"
               required
             />
           </label>
@@ -68,6 +68,7 @@
               type="text"
               pattern="^[a-zA-Z]+$"
               id="last name"
+              placeholder="ex. Doe"
               required
             />
           </label>
@@ -87,6 +88,7 @@
               autocorrect="off"
               autocomplete="on"
               inputmode="email"
+              placeholder="ex. johndoe@gmail.com"
               required
             />
           </label>
@@ -129,14 +131,13 @@
           >
             Send
           </button>
+          <p class="form__sucess" id="success">
+            Sucess! Your message was delivered! W'll reply as soon as possible!
+          </p>
         </form>
-        <div class="message">
-          <div class="success" id="success">Your message has been sent.</div>
-        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="./js/count.js"></script>
-    <script src="./js/notification.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

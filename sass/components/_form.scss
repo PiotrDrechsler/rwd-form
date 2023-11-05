@@ -50,6 +50,10 @@
       border: 2px solid #2196f3;
       border-radius: 4px;
     }
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
   }
 
   &__textarea {
@@ -71,5 +75,14 @@
       border: 1px solid #2196f3;
       border-radius: 4px;
     }
+  }
+
+  &__sucess {
+    opacity: 0;
+    transition: var(--transition);
+    font-size: 12px;
+    text-align: center;
+    color: var(--sucess);
+    margin-top: 21px;
   }
 }
